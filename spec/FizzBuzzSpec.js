@@ -27,4 +27,28 @@ describe("FizzBuzz", function() {
 
   });
 
+  describe("Returns Fizz, Buzz or FizzBuzz", function() {
+
+    it("returns Fizz when divisible by three", function() {
+      fizzbuzz = new FizzBuzz();
+      expect(fizzbuzz.play(3)).toEqual("Fizz");
+    });
+
+    it("returns Buzz when divisible by five", function() {
+      fizzbuzz = new FizzBuzz();
+      expect(fizzbuzz.play(5)).toEqual("Buzz");
+    });
+
+    it("returns FizzBuzz when divisible by three and five", function() {
+      fizzbuzz = new FizzBuzz();
+      expect(fizzbuzz.play(15)).toEqual("FizzBuzz");
+    });
+
+    it("returns the number if it is not divisible by three or five", function() {
+      fizzbuzz = new FizzBuzz();
+      expect(fizzbuzz.play(1)).toEqual(1);
+    });
+
+  });
+
 });
